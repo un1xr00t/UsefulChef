@@ -23,6 +23,11 @@ Linux (Fedora, RHEL, Ubuntu with timedatectl)
 
 📜 How It Works
 Detects the system’s public IP-based time zone using http://worldtimeapi.org/api/ip
+
+
+***Windows***
+![image](https://github.com/user-attachments/assets/78c73fe5-d83c-4084-9547-7cd95c794120)
+
 <br />
 Maps the IANA timezone format (e.g., America/New_York) to Windows time zones (e.g., Eastern Standard Time)
 <br />
