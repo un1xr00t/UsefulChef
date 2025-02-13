@@ -9,7 +9,7 @@ This Chef cookbook automatically detects and applies the correct time zone on a 
 <br />
 ✅ Applies the correct time zone and syncs system time
 <br />
-✅ Works across Windows, macOS, and Fedora Linux
+✅ Works across Windows, macOS, Ubuntu, and Fedora Linux
 <br />
 ✅ No external API keys required
 <br />
