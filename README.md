@@ -33,4 +33,5 @@ Ensures time synchronization is enabled to keep the clock accurate
 ***Windows***
 <br />
 <br />
-![image](https://github.com/user-attachments/assets/78c73fe5-d83c-4084-9547-7cd95c794120)
+![image](https://github.com/user-attachments/assets/8d09df7b-0bf2-41f9-979d-7cc44943f519)
+
