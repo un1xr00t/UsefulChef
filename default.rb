@@ -19,6 +19,7 @@ IANA_TO_WINDOWS_TZ = {
   "UTC" => "UTC",
 }.freeze
 
+# Function to fetch the timezone from an online API
 def fetch_online_timezone
   if platform?('windows')
     response = powershell_out!("Invoke-WebRequest -Uri \"http://worldtimeapi.org/api/ip\" -UseBasicParsing").stdout
@@ -34,7 +35,7 @@ if platform?('windows')
   # Fetch timezone from online API
   iana_timezone = fetch_online_timezone
   correct_timezone = IANA_TO_WINDOWS_TZ[iana_timezone] || "UTC"
-  
+
   # Get the current system time zone
   current_timezone = powershell_out!("tzutil /g").stdout.strip
 
@@ -58,22 +59,28 @@ if platform?('windows')
     action :run
   end
 
-elsif platform?('mac_os_x') || platform?('fedora')
+elsif platform?('mac_os_x') || platform?('fedora') || platform?('ubuntu')
   correct_timezone = fetch_online_timezone
   current_timezone = shell_out("timedatectl show --property=Timezone --value").stdout.strip
 
   Chef::Log.info("Detected IANA Time Zone: #{correct_timezone}")
-  Chef::Log.info("Current macOS/Linux Time Zone: #{current_timezone}")
+  Chef::Log.info("Current Linux/macOS/Ubuntu Time Zone: #{current_timezone}")
 
   if correct_timezone && current_timezone != correct_timezone
-    execute "Set Correct Time Zone on Linux/macOS" do
+    execute "Set Correct Time Zone on Linux/macOS/Ubuntu" do
       command "sudo timedatectl set-timezone \"#{correct_timezone}\""
       action :run
     end
+  else
+    Chef::Log.info("Time zone is already correct.")
   end
 
-  execute "Sync Time on Linux/macOS" do
-    command "sudo systemctl restart systemd-timesyncd.service"
+  # Ensure NTP synchronization is enabled for Ubuntu and other Linux distros
+  execute "Enable NTP Sync on Linux/macOS/Ubuntu" do
+    command <<-EOH
+      sudo timedatectl set-ntp true
+      sudo systemctl restart systemd-timesyncd.service
+    EOH
     action :run
   end
 
