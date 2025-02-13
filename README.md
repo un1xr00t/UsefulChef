@@ -26,6 +26,8 @@ Detects the system’s public IP-based time zone using http://worldtimeapi.org/a
 
 
 ***Windows***
+<br />
+<br />
 ![image](https://github.com/user-attachments/assets/78c73fe5-d83c-4084-9547-7cd95c794120)
 
 <br />
