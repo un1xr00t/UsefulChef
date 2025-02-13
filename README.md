@@ -2,6 +2,7 @@
 This Chef cookbook automatically detects and applies the correct time zone on a system. It works across Windows, macOS, and Linux (Fedora) by using network-based detection and ensuring the system time is accurate.
 
 ✨ Features
+<br />
 ✅ Accurately detects the user's time zone based on IP location
 <br />
 ✅ Maps IANA time zones to Windows time zone names (prevents tzutil errors)
