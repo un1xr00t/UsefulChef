@@ -3,10 +3,15 @@ This Chef cookbook automatically detects and applies the correct time zone on a 
 
 ✨ Features
 ✅ Accurately detects the user's time zone based on IP location
+<br />
 ✅ Maps IANA time zones to Windows time zone names (prevents tzutil errors)
+<br />
 ✅ Applies the correct time zone and syncs system time
+<br />
 ✅ Works across Windows, macOS, and Fedora Linux
+<br />
 ✅ No external API keys required
+<br />
 
 🛠 Supported Platforms
 Windows (10, 11, Server 2016+)
