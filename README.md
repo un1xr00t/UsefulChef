@@ -35,3 +35,7 @@ Ensures time synchronization is enabled to keep the clock accurate
 <br />
 ![image](https://github.com/user-attachments/assets/8d09df7b-0bf2-41f9-979d-7cc44943f519)
 
+<br />
+***Linux/Macos/Ubuntu***
+<br />
+![image](https://github.com/user-attachments/assets/b9dc57b0-8a3d-4605-959d-f633ec1eab5d)
