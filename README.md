@@ -38,5 +38,6 @@ Ensures time synchronization is enabled to keep the clock accurate
 <br />
 ***Linux/Macos/Ubuntu***
 <br />
+<br />
 ![image](https://github.com/user-attachments/assets/52339c96-a735-4846-a756-347a8c986c6e)
 
