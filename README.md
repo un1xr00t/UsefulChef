@@ -17,7 +17,6 @@ These cookbooks are designed to work **at scale**, supporting thousands of machi
 ✅ Applies the **appropriate time zone** for **Windows, macOS, and Fedora**  
 ✅ Synchronizes system time after applying the time zone  
 
-📖 **[Read Full Documentation](./timezone_cookbook/README.md)**  
 
 ### **2️⃣ OS Auto-Update Cookbook (system_update_cookbook)**
 ✅ Installs **Windows updates** via `PSWindowsUpdate`  
