@@ -19,3 +19,4 @@ It also **reboots the system** if an update requires it.
 - **Supports large-scale deployments**
 
 ---
+![image](https://github.com/user-attachments/assets/c683340f-eef9-46b2-8361-575ce1730838)
