@@ -1,42 +1,24 @@
-📌 Overview
-This Chef cookbook automatically detects and applies the correct time zone on a system. It works across Windows, macOS, and Linux (Fedora) by using network-based detection and ensuring the system time is accurate.
+# Chef Automation Cookbooks
 
-✨ Features
-<br />
-✅ Accurately detects the user's time zone based on IP location
-<br />
-✅ Maps IANA time zones to Windows time zone names (prevents tzutil errors)
-<br />
-✅ Applies the correct time zone and syncs system time
-<br />
-✅ Works across Windows, macOS, Ubuntu, and Fedora Linux
-<br />
-✅ No external API keys required
-<br />
+## 📌 Overview
+This repository contains **two Chef cookbooks** designed to automate essential system tasks across Windows, macOS, and Linux:
 
-🛠 Supported Platforms
-Windows (10, 11, Server 2016+)
-<br />
-macOS (Big Sur, Monterey, Ventura)
-<br />
-Linux (Fedora, RHEL, Ubuntu with timedatectl)
+1️⃣ **[`timezone_cookbook`](./timezone_cookbook/README.md)** → **Automatically detects and applies the correct system time zone**  
+2️⃣ **[`system_update_cookbook`](./system_update_cookbook/README.md)** → **Automatically installs OS updates and reboots if required**  
 
-📜 How It Works
-Detects the system’s public IP-based time zone using http://worldtimeapi.org/api/ip
-<br />
-Maps the IANA timezone format (e.g., America/New_York) to Windows time zones (e.g., Eastern Standard Time)
-<br />
-Applies the correct time zone if different from the current system setting
-<br />
-Ensures time synchronization is enabled to keep the clock accurate
+These cookbooks are designed to work **at scale**, supporting thousands of machines in an enterprise environment.
 
-***Windows***
-<br />
-<br />
-![image](https://github.com/user-attachments/assets/8d09df7b-0bf2-41f9-979d-7cc44943f519)
+---
 
+## 🚀 Cookbooks Included
 
-***Linux/Macos/Ubuntu***
+### **1️⃣ Timezone Configuration Cookbook (`timezone_cookbook`)**
+✅ Detects the user's **correct time zone**  
+✅ Applies the **appropriate time zone** for **Windows, macOS, and Fedora**  
+✅ Synchronizes system time after applying the time zone  
 
-![image](https://github.com/user-attachments/assets/52339c96-a735-4846-a756-347a8c986c6e)
+📖 **[Read Full Documentation](./timezone_cookbook/README.md)**  
 
+#### **🛠 Quick Run**
+```sh
+sudo chef-client --local-mode --runlist "recipe[timezone_cookbook::default]"
