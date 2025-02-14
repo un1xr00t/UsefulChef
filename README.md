@@ -19,6 +19,13 @@ These cookbooks are designed to work **at scale**, supporting thousands of machi
 
 📖 **[Read Full Documentation](./timezone_cookbook/README.md)**  
 
+### **2️⃣ OS Auto-Update Cookbook (system_update_cookbook)**
+✅ Installs **Windows updates** via `PSWindowsUpdate`  
+✅ Installs **macOS updates** via `softwareupdate`  
+✅ Installs **Fedora updates** via `dnf update`  
+✅ Reboots the system **only if required**  
+
 #### **🛠 Quick Run**
 ```sh
 sudo chef-client --local-mode --runlist "recipe[timezone_cookbook::default]"
+sudo chef-client --local-mode --runlist "recipe[system_update_cookbook::default]"
