@@ -3,8 +3,8 @@
 ## 📌 Overview
 This repository contains **two Chef cookbooks** designed to automate essential system tasks across Windows, macOS, and Linux:
 
-1️⃣ **[`timezone_cookbook`](./timezone_cookbook/README.md)** → **Automatically detects and applies the correct system time zone**  
-2️⃣ **[`system_update_cookbook`](./system_update_cookbook/README.md)** → **Automatically installs OS updates and reboots if required**  
+1️⃣ **[`timezone_cookbook`](./cookbooks/timezone_cookbook/README.md)** → **Automatically detects and applies the correct system time zone**  
+2️⃣ **[`system_update_cookbook`](./cookbooks/system_update_cookbook/README.md)** → **Automatically installs OS updates and reboots if required**  
 
 These cookbooks are designed to work **at scale**, supporting thousands of machines in an enterprise environment.
 
