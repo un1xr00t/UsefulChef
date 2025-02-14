@@ -19,12 +19,3 @@ It also **reboots the system** if an update requires it.
 - **Supports large-scale deployments**
 
 ---
-
-## 🛠 Installation
-
-### **1️⃣ Ensure Chef Client is Installed**
-The cookbook requires **Chef Infra Client**. If Chef is already installed, skip this step.
-
-Check if Chef is installed:
-```sh
-chef-client --version
